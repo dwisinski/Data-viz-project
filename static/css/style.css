@@ -1,0 +1,32 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.75rem;
+    fill: #0000009a;
+    font-weight: 300;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    fill: #00000075;
+    font-weight: 300;
+}
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;
+    align-content: center;
+    padding: 5px;				
+    font: 12px sans-serif;		
+    background: white;
+    margin-right: 10%;
+    margin-left: 10%;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;			
+    pointer-events: none;			
+}
