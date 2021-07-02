@@ -48,7 +48,7 @@ d3.csv("static/csv/monthly_crime_data.csv").then((data) => {
     .select(".domain").remove()
 
   // creating tooltip
-  var Tooltip = d3.select("#div_template")
+  var tooltip = d3.select("#div_template")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
@@ -68,7 +68,7 @@ d3.csv("static/csv/monthly_crime_data.csv").then((data) => {
 
   // creating functions that change the tooltip when user mouseovers / moves / leaves a cell
   var mouseover = function (d) {
-    Tooltip
+    tooltip
       .style("opacity", 1)
     d3.select(this)
       .style("stroke", "white")
@@ -77,15 +77,8 @@ d3.csv("static/csv/monthly_crime_data.csv").then((data) => {
     select_y_label(d).attr('style', "font-weight: bold;")
   }
 
-  // var mousemove = function (d) {
-  //   Tooltip
-  //     .style("left", (d3.event.pageX - 225) + "px")
-  //     .style("top", (d3.event.pageY + 25) + "px")
-  //     .html(`${d.primary_type} </br>COUNT ${d.month}: ` + `<b>${numberWithCommas(+d.counts)}</b>`)
-  // }
-
   var mouseleave = function (d) {
-    Tooltip
+    tooltip
       .style("opacity", 0)
     d3.select(this)
       .style("stroke", "none")
@@ -104,7 +97,7 @@ d3.csv("static/csv/monthly_crime_data.csv").then((data) => {
 
     // mousemove function with percentages
     var mousemove = function (d) {
-      Tooltip
+      tooltip
         .style("left", (d3.event.pageX - 225) + "px")
         .style("top", (d3.event.pageY + 25) + "px")
         .html(`${d.primary_type} </br>COUNT ${d.month}: ` + `<b>${numberWithCommas(+d.counts)}</b>` + ` (${d3.format(".2f")((+d.counts / sum) * 100)}%)`)
