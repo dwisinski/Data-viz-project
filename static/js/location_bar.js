@@ -63,20 +63,22 @@ d3.csv("static/csv/location_crime_data.csv").then(function (data) {
             .join("rect")
             .attr("x", x(0))
             .attr("y", d => y(d.location_description))
-            .on('mouseover', function (d, i) {
+            .on("mouseover", function (d, i) {
                 tooltip
                   .html(
-                    `<div>${topTen[0].map(d => data[i].location_description)}</div>`
+                    `<div>Count: ${i.count}</div>`
                   )
                   .style('visibility', 'visible');
-                d3.select(this).transition().attr('fill', hoverColor);
+                d3.select(this).transition().attr('fill', "#437C90");
             })
-            .on("mouseover", function () {
-                d3.select(this)
-                    .attr("fill", "#437C90")
+            .on('mousemove', function () {
+                tooltip
+                .style("left", (d3.event.pageX - 225) + "px")
+                .style("top", (d3.event.pageY + 25) + "px")
             })
-            .on("mouseout", function () {
-                d3.select(this).attr("fill", "#B3DDF2")
+            .on('mouseout', function () {
+                tooltip.html(``).style('visibility', 'hidden');
+                d3.select(this).transition().attr('fill', "#B3DDF2");
             })
             .transition()
             .attr("height", y.bandwidth())
