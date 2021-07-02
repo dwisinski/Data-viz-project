@@ -76,7 +76,7 @@ d3.csv("static/csv/location_crime_data.csv").then((data) => {
                 tooltip.html(``).style('visibility', 'hidden');
                 d3.select(this).transition().attr('fill', "#B3DDF2");
             })
-            .transition()
+            .transition('bars')
             .attr("height", y.bandwidth())
             .transition()
             .duration(2000)
@@ -130,7 +130,7 @@ d3.csv("static/csv/location_crime_data.csv").then((data) => {
                 tooltip.html(``).style('visibility', 'hidden');
                 d3.select(this).transition().attr('fill', "#B3DDF2");
             })
-            .transition()
+            .transition('bars')
             .attr("height", y.bandwidth())
             .transition()
             .duration(2000)
