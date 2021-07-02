@@ -69,8 +69,8 @@ d3.csv("static/csv/location_crime_data.csv").then((data) => {
                 tooltip
                     .html(`<div>${d3.format(",")(i.count)}</div>`)
                     .style('visibility', 'visible')
-                    .style("left", (event.pageX - 150) + "px")
-                    .style("top", (event.pageY + 25) + "px")
+                    .style("left", (event.pageX - 200) + "px")
+                    .style("top", (event.pageY + 15) + "px")
             })
             .on('mouseout', function () {
                 tooltip.html(``).style('visibility', 'hidden');
@@ -123,8 +123,8 @@ d3.csv("static/csv/location_crime_data.csv").then((data) => {
                 tooltip
                     .html(`<div>${d3.format(",")(i.count)}</div>`)
                     .style('visibility', 'visible')
-                    .style("left", (event.pageX - 150) + "px")
-                    .style("top", (event.pageY + 25) + "px")
+                    .style("left", (event.pageX - 200) + "px")
+                    .style("top", (event.pageY + 15) + "px")
             })
             .on('mouseout', function () {
                 tooltip.html(``).style('visibility', 'hidden');
