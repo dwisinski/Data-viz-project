@@ -22,7 +22,6 @@ tooltip = d3
     .style('background', 'rgba(0,0,0,0.6)')
     .style('border-radius', '4px')
     .style('color', '#fff')
-    .text('a simple tooltip');
 
 // reading the .csv data
 d3.csv("location_crime_data.csv").then(function (data) {
