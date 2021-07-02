@@ -12,7 +12,7 @@ var svg = d3.select("#div_template")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // reading the .csv data
-d3.csv("monthly_crime_data.csv").then((data) => {
+d3.csv("static/csv/monthly_crime_data.csv").then((data) => {
 
   // labels of row and columns
   var months = d3.map(data, d => d.month).keys()

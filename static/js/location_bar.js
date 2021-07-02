@@ -24,7 +24,7 @@ tooltip = d3
     .style('color', '#fff')
 
 // reading the .csv data
-d3.csv("location_crime_data.csv").then(function (data) {
+d3.csv("static/csv/location_crime_data.csv").then(function (data) {
 
     const n = 10;
     var grouped = _.groupBy(data, d => d.primary_type);
