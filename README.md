@@ -15,9 +15,9 @@ Data was retrieved from the Chicago Data Portal via API request from the Jupyter
 
 ## Data Visualizations
 
-The bar chart visualization is intended to illustrate the top ten most common locations recorded for each type of crime, selectable from the dropdown menu. The size of the bar indicates the proportional difference in occurrences at each location type (i.e. locations with larger bars have more frequent occurrences). A tooltip provides the exact frequency count on hover.
+The bar chart visualization is intended to illustrate the top ten most common locations recorded for each type of crime, selectable from the dropdown menu. The size of the bar indicates the proportional difference in occurrences at each location type (i.e. locations with larger bars have more frequent occurrences of the indicated type of crime). A tooltip provides the exact frequency count on hover.
 
-The heatmap visualization is intended to illustrate the seasonality component for each type of crime recorded (i.e. each type of crime is color-scaled individually by row). The min/max color scale at the bottom of the illustration provides a color code ranging from dark green (min values) to dark red (max values). As confirmed by various studies, crime (and particularly violent crime) tends to spike with warmer temperatures. This is confirmed via the illustration which demonstrates a clear pattern of concentrated maximum values for many types of crime during the months of May - August. A tooltip provides exact frequency counts by month, as well as annualized percentage values (month total over yearly total) on hover.
+The heatmap visualization is intended to illustrate the seasonality component for each type of crime recorded (i.e. each type of crime is color-scaled on a calendar basis individually by row). The min/max color scale at the bottom of the illustration provides a color code ranging from dark green (min values) to dark red (max values). As confirmed by various studies, crime (and particularly violent crime) tends to spike with warmer temperatures. This is confirmed via the illustration which demonstrates a clear pattern of concentrated maximum values for many types of crime during the months of May - August. A tooltip provides exact frequency counts by month, as well as annualized percentage values (month total over yearly total) on hover.
 
 ## Notes
 
