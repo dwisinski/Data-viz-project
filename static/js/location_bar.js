@@ -27,9 +27,8 @@ d3.csv("static/csv/location_crime_data.csv").then((data) => {
         .style('position', 'absolute')
         .style('z-index', '10')
         .style('visibility', 'hidden')
-        .style('padding', '10px')
+        .style('padding', '12px')
         .style('background', 'rgba(0,0,0,0.6)')
-        .style('border-radius', '4px')
         .style('color', '#fff')
 
     // creating the initial chart on load
@@ -68,10 +67,10 @@ d3.csv("static/csv/location_crime_data.csv").then((data) => {
             })
             .on('mousemove', function (d, i) {
                 tooltip
-                    .html(`<div>Count: ${d3.format(",")(i.count)}</div>`)
+                    .html(`<div>${d3.format(",")(i.count)}</div>`)
                     .style('visibility', 'visible')
-                    .style("left", (d3.event.pageX - 25) + "px")
-                    .style("top", (d3.event.pageY + 25) + "px")
+                    .style("left", (event.pageX - 150) + "px")
+                    .style("top", (event.pageY + 25) + "px")
             })
             .on('mouseout', function () {
                 tooltip.html(``).style('visibility', 'hidden');
@@ -122,10 +121,10 @@ d3.csv("static/csv/location_crime_data.csv").then((data) => {
             })
             .on('mousemove', function (d, i) {
                 tooltip
-                    .html(`<div>Count: ${d3.format(",")(i.count)}</div>`)
+                    .html(`<div>${d3.format(",")(i.count)}</div>`)
                     .style('visibility', 'visible')
-                    .style("left", (d3.event.pageX - 25) + "px")
-                    .style("top", (d3.event.pageY + 25) + "px")
+                    .style("left", (event.pageX - 150) + "px")
+                    .style("top", (event.pageY + 25) + "px")
             })
             .on('mouseout', function () {
                 tooltip.html(``).style('visibility', 'hidden');
